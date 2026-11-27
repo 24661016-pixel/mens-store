@@ -20,3 +20,7 @@ Script ghép 4 phần của gói nén, kiểm SHA-256, áp dụng các cập nh�
 Đã thử cài trên bản Premium với Mua ngay/tồn kho/bảng size và cài lần lượt các điều kiện từ ZIP Premium, chạy lại không ghi đè thêm, thử giữ tùy chỉnh navbar/CSS admin, kiểm cú pháp Python và JavaScript. Biên dịch Java 21 các model và lớp xử lý CartService, OrderService, CheckoutSupport với test doubles, chạy mô phỏng chọn size, giỏ khách độc lập, đổi size, giới hạn tồn, mua trực tiếp không xóa giỏ và bảo vệ xác nhận đơn. Có bổ sung test Java dùng Mockito trong dự án. Chưa chạy Maven, Spring Boot, Thymeleaf, MySQL hay Docker thực tế.
 
 Sau build, mở cửa sổ ẩn danh, chọn size áo/quần, thêm 2 size vào giỏ, bấm Mua ngay, kiểm thông tin giao hàng và tạm tính. Nếu đặt đơn thử, dùng COD và thông tin thử nghiệm, lưu mã đơn, kiểm size từng dòng trong admin rồi hủy đơn thử nếu phù hợp. Kiểm tra phiên khác không mở được trang xác nhận đơn khách và khách không vào được quản trị. Không dùng dữ liệu cá nhân thật khi thử nghiệm.
+
+## Sửa lỗi không khớp phiên bản (27/11/2026)
+
+Script apply.py hỗ trợ cả bố cục đã cài cap-nhat-mua-hang trước cap-nhat-mua-ngay. Kiểm tra thực tế với bản Premium gồm các cập nhật mua hàng, mua ngay, tồn kho, bảng size: đủ 27 file áp dụng thành công và chạy lại không ghi thêm. Giữ bố cục cart/checkout/detail và link CSS cũ. Không bỏ kiểm tra checksum; nếu mã nguồn tùy chỉnh khác hai bản thử nghiệm, script vẫn dừng trước khi ghi. Chưa kiểm thử Spring Boot/MySQL đang chạy trong Codespaces. Chạy lại lệnh cập nhật ở trên để lấy bản sửa mới.
